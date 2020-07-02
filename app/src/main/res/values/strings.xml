@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Foodery</string>
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="order">My Order</string>
+    <string name="favourite">Favourite</string>
+    <string name="profile">Profile</string>
 </resources>
