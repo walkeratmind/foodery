@@ -78,4 +78,12 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // Lottie Animation
+    implementation "com.airbnb.android:lottie:3.4.0"
+
+    // RxKotlin
+//    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+//    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.0'
+//    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
 }
