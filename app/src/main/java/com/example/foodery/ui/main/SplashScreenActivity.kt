@@ -6,11 +6,15 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.foodery.R
 import com.example.foodery.ui.main.view.MainActivity
-import kotlinx.android.synthetic.main.activity_splash_screen.*
+import kotlinx.coroutines.*
+
 
 class SplashScreenActivity : AppCompatActivity() {
 
     var TAG = "SplashScreenActivity"
+
+    val activityScope = CoroutineScope(Dispatchers.Main)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,10 +25,22 @@ class SplashScreenActivity : AppCompatActivity() {
 //            setMinAndMaxFrame(30, 60)
 //        }
 
-        Log.d(TAG, "isAnmitaing: " + lottieAnimView.isAnimating)
+        activityScope.launch {
+            delay(3000)
+
+            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+        }
+
+
+
 
 //        startActivity(Intent(this, MainActivity::class.java))
 
+    }
+
+    override fun onDestroy() {
+        activityScope.cancel()
+        super.onDestroy()
     }
 
 }
