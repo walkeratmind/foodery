@@ -10,15 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.SplashScreenActivity" android:theme="@style/AppTheme.SplashScreen">
+        <activity
+            android:name=".ui.main.SplashScreenActivity"
+            android:theme="@style/AppTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.view.MainActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ui.main.view.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.view.LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.main.view.MainActivity">
-
         </activity>
 
     </application>
