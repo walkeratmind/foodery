@@ -46,8 +46,6 @@ class HomeViewModel: ViewModel() {
                 foodItems.postValue(Resource.Error(exception.toString()))
                 Log.w(TAG, "Error getting documents.", exception)
             }
-
-
     }
 
 

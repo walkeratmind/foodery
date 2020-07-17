@@ -32,11 +32,15 @@ class HomeFragment : Fragment() {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         setupUI()
 
         initItems()
-
-        return binding.root
     }
 
     private fun setupUI() {
