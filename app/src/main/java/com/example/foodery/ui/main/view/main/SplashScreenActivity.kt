@@ -1,11 +1,10 @@
-package com.example.foodery.ui.main
+package com.example.foodery.ui.main.view.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.foodery.R
-import com.example.foodery.ui.main.view.main.LoginActivity
 import kotlinx.coroutines.*
 
 
@@ -29,6 +28,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(3000)
 
             startActivity(Intent(this@SplashScreenActivity, LoginActivity::class.java))
+            finish()
         }
 
 

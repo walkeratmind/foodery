@@ -32,7 +32,7 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
         holder.itemView.apply {
             itemNameView.text = item.name
             itemDescriptionView.text = item.description
-            normalPriceView.text = item.normalPrice.toString()
+            normalPriceView.text =  item.normalPrice.toString()
         }
     }
 

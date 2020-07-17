@@ -23,6 +23,9 @@
     <color name="colorTitle">#313131</color>
     <color name="colorCardViewBackground">#E9EAED</color>
 
+    <color name="colorStatusConnected">#43A047</color>
+    <color name="colorStatusNotConnected">#D32F2F</color>
+
     <!--   MATERIAL COLOR LINK
     https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=F2B705&secondary.color=F2B705&secondary.text.color=1e1e1e
     -->
