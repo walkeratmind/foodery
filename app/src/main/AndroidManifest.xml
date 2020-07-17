@@ -16,24 +16,19 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.main.view.MainActivity">
-
-        </activity>
-
-        <activity
-            android:name=".ui.main.view.RegisterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.main.view.LoginActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.view.main.MainActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ui.main.view.main.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.view.main.LoginActivity"
+            android:screenOrientation="portrait">
         </activity>
 
     </application>

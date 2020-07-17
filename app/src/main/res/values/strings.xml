@@ -48,4 +48,28 @@
     <string name="full_name">Full Name</string>
     <string name="remind_me_later">Remind me later.</string>
 
+    <!--    Items-->
+    <string name="exit_dialog_message">Are you sure want to exit?</string>
+    <string name="exit_dialog_title">Exit?</string>
+    <string name="option_yes">Yes</string>
+    <string name="option_no">No</string>
+    <string name="item_image">item image</string>
+    <string name="veg">Veg.</string>
+    <string name="non_veg">Non Veg.</string>
+    <string name="item_name">Item Name</string>
+    <string name="select_category">Select Category</string>
+    <string name="normal_price">Normal Price</string>
+    <string name="offer_price">Offer Price</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="category_image">category image</string>
+    <string name="category_name">Category Name</string>
+    <string name="add_item">Add Item</string>
+    <string name="add_category">Add Category</string>
+    <string name="item">Item</string>
+    <string name="categories">Categories</string>
+    <string name="items">Items</string>
+
+    <string name="np_currency">Rs.</string>
+
 </resources>

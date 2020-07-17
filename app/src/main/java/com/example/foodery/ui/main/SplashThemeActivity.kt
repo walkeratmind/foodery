@@ -3,7 +3,7 @@ package com.example.foodery.ui.main
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.foodery.ui.main.view.MainActivity
+import com.example.foodery.ui.main.view.main.MainActivity
 
 class SplashThemeActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
