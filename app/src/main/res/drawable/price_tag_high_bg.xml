@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 <!--    <solid android:color="@color/primaryColor"/>-->
-    <gradient android:startColor="@color/primaryLightColor" android:endColor="@color/secondaryColor"/>
+
+<!--    <gradient android:startColor="@color/colorPink" android:angle="135"  android:endColor="@color/primaryColor"/>-->
+
+    <gradient android:startColor="#ff4b1f"  android:endColor="#db36a4"
+        android:angle="360"/>
 
     <corners android:topLeftRadius="@dimen/radius_regular"
         android:bottomLeftRadius="@dimen/radius_regular"/>

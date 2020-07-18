@@ -32,7 +32,11 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
         holder.itemView.apply {
             itemNameView.text = item.name
             itemDescriptionView.text = item.description
-            normalPriceView.text = item.normalPrice.toString()
+
+            if (item.normalPrice > 500) {
+                normalPriceView.setBackgroundResource(R.drawable.price_tag_high_bg)
+            }
+            normalPriceView.append(" ${item.normalPrice}")
         }
     }
 

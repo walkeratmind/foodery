@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var itemAdapter: ItemAdapter
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var fragmentHomeBinding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,9 +30,9 @@ class HomeFragment : Fragment() {
     ): View? {
 
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        fragmentHomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
-        return binding.root
+        return fragmentHomeBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,13 +41,14 @@ class HomeFragment : Fragment() {
         setupUI()
 
         initItems()
+
     }
 
     private fun setupUI() {
 
         itemAdapter = ItemAdapter()
 
-        binding.itemRecyclerView.apply {
+        fragmentHomeBinding.itemRecyclerView.apply {
             adapter = itemAdapter
             layoutManager = LinearLayoutManager(activity)
         }
@@ -66,7 +67,7 @@ class HomeFragment : Fragment() {
                     response.message?.let { message ->
                         showLoading(false)
                         Log.e(TAG, "Error: $message")
-                        Snackbar.make(binding.root, "Error:  $message", Snackbar.LENGTH_SHORT)
+                        Snackbar.make(fragmentHomeBinding.root, "Error:  $message", Snackbar.LENGTH_SHORT)
                             .show()
                     }
                 }
@@ -78,7 +79,7 @@ class HomeFragment : Fragment() {
             }
         })
 
-        binding.swipeRefreshLayout.setOnRefreshListener {
+        fragmentHomeBinding.swipeRefreshLayout.setOnRefreshListener {
             getFoodItems()
         }
 
@@ -95,7 +96,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        binding.swipeRefreshLayout.isRefreshing = isLoading
+        fragmentHomeBinding.swipeRefreshLayout.isRefreshing = isLoading
     }
 
     companion object {
