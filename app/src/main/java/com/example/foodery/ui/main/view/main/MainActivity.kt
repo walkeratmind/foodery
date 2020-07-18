@@ -13,16 +13,21 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.foodery.R
 import com.example.foodery.databinding.ActivityMainBinding
-import com.example.foodery.utils.NetworkUtils
-import com.example.foodery.utils.getColorRes
-import com.example.foodery.utils.hide
-import com.example.foodery.utils.show
+import com.example.foodery.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.dialog.MaterialDialogs
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityMainBinding
+
+    private lateinit var firebaseAuth: FirebaseAuth
+
+    override fun onStart() {
+        super.onStart()
+        firebaseAuth = FirebaseAuth.getInstance()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,16 +50,7 @@ class MainActivity : AppCompatActivity() {
                         setBackgroundResource(R.drawable.primary_gradient_bg)
 
                         alpha = 0f
-                        animate()
-                            .alpha(1f)
-                            .setInterpolator(AccelerateDecelerateInterpolator())
-                            .setStartDelay(ANIMATION_DURATION)
-                            .setDuration(ANIMATION_DURATION)
-                            .setListener(object : AnimatorListenerAdapter() {
-                                override fun onAnimationStart(animation: Animator?) {
-                                    show()
-                                }
-                            })
+                        fadeIn(animDuration = MainActivity.ANIMATION_DURATION)
                     }
                 } else {
                     mBinding.textViewNetworkStatus.text = getString(R.string.text_connectivity)
@@ -62,16 +58,7 @@ class MainActivity : AppCompatActivity() {
 //                        setBackgroundColor(getColorRes(R.color.colorStatusConnected))
                         setBackgroundResource(R.drawable.primary_gradient_success)
                         alpha = 1f
-                        animate()
-                            .alpha(0f)
-                            .setInterpolator(AccelerateDecelerateInterpolator())
-                            .setStartDelay(ANIMATION_DURATION)
-                            .setDuration(ANIMATION_DURATION)
-                            .setListener(object : AnimatorListenerAdapter() {
-                                override fun onAnimationEnd(animation: Animator?) {
-                                    hide()
-                                }
-                            })
+                        fadeOut(animDuration = MainActivity.ANIMATION_DURATION)
 
                     }
                 }

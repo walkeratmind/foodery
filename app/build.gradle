@@ -104,4 +104,7 @@ dependencies {
 //    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 //    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.0'
 //    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
+
+    // Material Dialogs: https://github.com/afollestad/material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:3.2.1'
 }

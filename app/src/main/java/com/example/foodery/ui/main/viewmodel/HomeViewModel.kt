@@ -23,7 +23,7 @@ class HomeViewModel: ViewModel() {
         foodItems.postValue(Resource.Loading())
 
         // Read data from Cloud Firestore
-        db.collection(Constants.ITEM_PATH).get()
+        db.collection(Constants.ITEM_REF).get()
             .addOnSuccessListener { result ->
                 val itemList: MutableList<Item>? = mutableListOf()
                 for (document in result) {

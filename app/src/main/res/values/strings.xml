@@ -16,6 +16,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="login_Success">"Login Success"</string>
 
 
     <!-- Strings related to login -->
@@ -70,11 +71,31 @@
     <string name="categories">Categories</string>
     <string name="items">Items</string>
 
-    <string name="np_currency">Rs.</string>
+    <string name="currency">Rs.</string>
+    <string name="price_string">Rs. %d</string>
+
+    <string name="date_string">Order Date: %s</string>
 
     <string name="text_no_connectivity">No Connection</string>
     <string name="text_connectivity">Back Online</string>
     <string name="text_post_header">Post Header</string>
+    <string name="quantity">Quantity</string>
+    <string name="_0">0</string>
+    <string name="label_order">Order</string>
+    <string name="label_add_to_cart">Add to cart</string>
+    <string name="total_price">Total Price:</string>
+
+    <string name="error_min_item">Minimum item must be 1</string>
+    <string name="error_max_item">Maximum item must be less than 20</string>
+    <string name="_1">1</string>
+    <string name="rs_0">Rs. 0</string>
+    <string name="successful">Successful</string>
+    <string name="failed">Failed</string>
+    <string name="phone_field">Phone</string>
+    <string name="location_field">Location</string>
+    <string name="order_date">Order Date</string>
+    <string name="location_string">Location: %d</string>
+    <string name="order_status_string">Order Status: %s</string>
 
 
 </resources>

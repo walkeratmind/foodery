@@ -10,7 +10,8 @@ import com.example.foodery.R
 import com.example.foodery.data.model.Item
 import kotlinx.android.synthetic.main.layout_item.view.*
 
-class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter: RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
@@ -36,9 +37,20 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
             if (item.normalPrice > 500) {
                 normalPriceView.setBackgroundResource(R.drawable.price_tag_high_bg)
             }
-            normalPriceView.append(" ${item.normalPrice}")
+            normalPriceView.text = context.getString(R.string.price_string, item.normalPrice)
+
+            setOnClickListener{
+                onItemClickListener?.let { it(item) }
+            }
         }
     }
+
+    private var onItemClickListener: ((Item) -> Unit)? = null
+
+    fun setOnClickListener(listener: (Item) -> Unit) {
+        onItemClickListener = listener
+    }
+
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Item>() {
