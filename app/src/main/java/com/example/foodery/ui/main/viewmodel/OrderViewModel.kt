@@ -77,7 +77,6 @@ class OrderViewModel : ViewModel() {
             }
     }
 
-
     companion object {
         const val TAG = "OrderViewModel"
     }

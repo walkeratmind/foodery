@@ -34,7 +34,6 @@ class SplashScreenActivity : AppCompatActivity() {
             finish()
         }
 
-
 //        startActivity(Intent(this, MainActivity::class.java))
 
     }
@@ -43,5 +42,4 @@ class SplashScreenActivity : AppCompatActivity() {
         activityScope.cancel()
         super.onDestroy()
     }
-
 }
