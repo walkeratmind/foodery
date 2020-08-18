@@ -15,3 +15,7 @@ Get food without any hassle whenever and wherever you are.
 - Testing
 - Material Design
 - Firebase
+
+## Libraries
+
+- Lottie Animation Library
